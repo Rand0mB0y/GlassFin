@@ -205,3 +205,36 @@ a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButt
   padding: 2rem;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ Settings Pages - Fine Touches ~~~~~~~~~~~~~~~~~~~ END */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Login Page - STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~ START */
+/* Whole bar - Revert & Style for Top Use */
+.layout-desktop body.hideMainDrawer .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv {
+  position: unset;
+  flex-direction: unset;
+  height: unset;
+  width: unset;
+  background: unset;
+  opacity: unset;
+  background: linear-gradient(180deg,rgb(3 58 82) 20%, rgb(49 73 168 / 0%) 100%);
+  margin-bottom: auto;
+}
+
+/* JF & Tabs Buttons - Revert & Center Server Name  */
+.layout-desktop body.hideMainDrawer .MuiStack-root.css-x5lcu9 {
+  position: unset;
+  bottom: unset;
+  font: unset;
+  max-width: 720px;
+  margin: 10px auto auto auto;
+}
+
+/* Jellyfin Server Name (Hover) - Revert  */
+.layout-desktop body.hideMainDrawer .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv:hover a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky {
+  font-size: unset;
+}
+
+/* Login Box - Place below server name in the center */
+.layout-desktop body.hideMainDrawer div#loginPage {
+  display: block;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Login Page - STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~ END */
