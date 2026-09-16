@@ -228,6 +228,11 @@ a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButt
   margin: 10px auto auto auto;
 }
 
+/* Jellyfin Server Name - Revert  */
+.layout-desktop body.hideMainDrawer .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky {
+  font-size: unset;
+}
+
 /* Jellyfin Server Name (Hover) - Revert  */
 .layout-desktop body.hideMainDrawer .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv:hover a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky {
   font-size: unset;
