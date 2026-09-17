@@ -83,11 +83,12 @@
 
 /* Sidebar Hover */
 .layout-desktop .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv:hover {
-  width: 290px;
+  width: 320px;
   opacity: 1;
   transition-property: width, opacity;
   transition-duration: 0.5s;
   transition-timing-function: ease;
+  backdrop-filter: blur(.8px);
 }
 
 /* Button Texts */
@@ -144,7 +145,7 @@ a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButt
 
 /* Background Gradient Main Menu */
 .layout-desktop .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-1tmqktv {
-  background: linear-gradient(90deg,rgb(3 58 82) 20%, rgb(49 73 168 / 0%) 100%);
+  background: linear-gradient(90deg, rgb(2 5 30) 20%, rgb(49 73 168 / 0%) 100%);
   /* text-shadow: 1.5px 1.5px 3px #022236e3; */
   text-shadow: 1.5px 1.5px 3px #4b4b4be3;
 }
@@ -321,5 +322,35 @@ a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButt
 .layout-desktop button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButtonGroup-firstButton.css-au9l87:hover, .layout-desktop button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButtonGroup-lastButton.css-au9l87:hover {
     background-color: #1579c0e0 !important;
     transition: background-color 0.3s ease;
+}
+/* Add in hover text */
+/* Soft left-to-right tooltip */
+.css-i2hxb6::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-10px, -50%);
+    margin-left: 8px;
+    white-space: nowrap;
+    font-size: large;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+/* Animate in from the left */
+.css-i2hxb6:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+}
+/* HIDE TOOLTIPS */
+.MuiTooltip-popper {
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 /* ~~~~~~~~~~~~~~~~~~~ Library Filter Menus & Buttons - "GLASSY"fying ~~~~~~~~~~~~~~~~~ END */
